@@ -15,6 +15,12 @@ func main() {
 	// 连接数据库
 	global.DB = core.InitGorm()
 	fmt.Println(global.DB)
+
+	// 日志
+	global.Log = core.InitLogger()
+	global.Log.Warnln("warn")
+	global.Log.Error("error")
+	global.Log.Infof("info")
 	//r := gin.Default()
 	//r.GET("/", func(c *gin.Context) {
 	//	c.String(http.StatusOK, "success")
