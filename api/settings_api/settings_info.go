@@ -2,12 +2,9 @@ package settings_api
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
+	"github.com/zhime/gin-vue/model/common/response"
 )
 
 func (s SettingApi) SettingsApiView(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"msg":     "xxx",
-		"success": "true",
-	})
+	response.Fail(c)
 }
