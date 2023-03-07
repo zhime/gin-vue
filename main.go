@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/zhime/gin-vue/core"
 	"github.com/zhime/gin-vue/global"
+	"github.com/zhime/gin-vue/router"
 )
 
 func main() {
@@ -21,6 +22,11 @@ func main() {
 	global.Log.Warnln("warn")
 	global.Log.Error("error")
 	global.Log.Infof("info")
+
+	// 路由
+	fmt.Println(global.Config.System.Addr())
+	r := router.InitRouter()
+	_ = r.Run(global.Config.System.Addr())
 	//r := gin.Default()
 	//r.GET("/", func(c *gin.Context) {
 	//	c.String(http.StatusOK, "success")
