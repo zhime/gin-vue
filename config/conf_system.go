@@ -1,6 +1,6 @@
 package config
 
-import "strconv"
+import "fmt"
 
 type System struct {
 	Host string `yaml:"host"`
@@ -9,5 +9,5 @@ type System struct {
 }
 
 func (s System) Addr() string {
-	return s.Host + ":" + strconv.Itoa(s.Port)
+	return fmt.Sprintf("%s:%d", s.Host, s.Port)
 }
