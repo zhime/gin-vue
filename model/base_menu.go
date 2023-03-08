@@ -12,7 +12,7 @@ type BaseMenu struct {
 	Component     string                                     `json:"component" gorm:"comment:对应前端文件路径"` // 对应前端文件路径
 	Sort          int                                        `json:"sort" gorm:"comment:排序标记"`          // 排序标记
 	Meta          `json:"meta" gorm:"embedded;comment:附加属性"` // 附加属性
-	SysAuthoritys []Authority                                `json:"authoritys" gorm:"many2many:sys_authority_menus;"`
+	SysAuthoritys []Authority                                `json:"authoritys" gorm:"many2many:authority_menus;"`
 	Children      []BaseMenu                                 `json:"children" gorm:"-"`
 	Parameters    []BaseMenuParameter                        `json:"parameters"`
 	MenuBtn       []BaseMenuBtn                              `json:"menuBtn"`
