@@ -3,10 +3,14 @@ package db
 import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 	"strconv"
 )
 
-var DB *gorm.DB
+var (
+	DB          *gorm.DB
+	mysqlLogger logger.Interface
+)
 
 func init() {
 	host := "127.0.0.1"
@@ -16,6 +20,9 @@ func init() {
 	dbName := "gorm"
 	config := "charset=utf8mb4&parseTime=True&loc=Local"
 
+	//mysqlLogger := logger.Default.LogMode(logger.Info) // 设置日志等级
+	mysqlLogger = logger.Default.LogMode(logger.Info)
+
 	//db := "user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
 	dsn := username + ":" + password + "@tcp(" + host + ":" + strconv.Itoa(port) + ")/" + dbName + "?" + config
 
@@ -24,9 +31,15 @@ func init() {
 		//	TablePrefix:   "gorm_", // 表名前缀
 		//	SingularTable: true,    // 单数表名
 		//},
+		//Logger: mysqlLogger,  // 日志
 	})
 	if err != nil {
 		panic("数据库连接失败，" + err.Error())
 	}
+
+	//DB = db.Session(&gorm.Session{
+	//	Logger: mysqlLogger,
+	//})
+
 	DB = db
 }

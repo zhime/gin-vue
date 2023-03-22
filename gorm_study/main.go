@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	//err := db.DB.Debug().AutoMigrate(&models.Student{})
 	err := db.DB.AutoMigrate(&models.Student{})
 	if err != nil {
 		fmt.Println(err)
