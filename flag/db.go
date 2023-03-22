@@ -6,10 +6,10 @@ import (
 )
 
 func MakeMigrations() {
-	_ = global.DB.Set("gorm:table_options", "ENGINE=InnoDB").AutoMigrate(
+	_ = global.DB.Set("gorm_study:table_options", "ENGINE=InnoDB").AutoMigrate(
 		&model.User{},
 		&model.Authority{},
-		&model.BaseMenu{},
+		//&model.BaseMenu{},
 		//&model.BaseMenuBtn{},
 		//&model.BaseMenuParameter{},
 		//&model.Meta{},
