@@ -3,7 +3,6 @@ package db
 import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"gorm.io/gorm/schema"
 	"strconv"
 )
 
@@ -21,10 +20,10 @@ func init() {
 	dsn := username + ":" + password + "@tcp(" + host + ":" + strconv.Itoa(port) + ")/" + dbName + "?" + config
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
-		NamingStrategy: schema.NamingStrategy{
-			TablePrefix:   "gorm_", // 表名前缀
-			SingularTable: true,    // 单数表名
-		},
+		//NamingStrategy: schema.NamingStrategy{
+		//	TablePrefix:   "gorm_", // 表名前缀
+		//	SingularTable: true,    // 单数表名
+		//},
 	})
 	if err != nil {
 		panic("数据库连接失败，" + err.Error())
