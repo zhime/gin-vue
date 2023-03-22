@@ -16,9 +16,11 @@ func main() {
 	}
 
 	// 添加记录
-	crud.Insert()
+	//crud.Insert()
 
 	// 查询
-	crud.Select()
+	//crud.Select()
 
+	// 更新
+	crud.Update()
 }
