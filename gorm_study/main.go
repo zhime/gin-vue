@@ -22,5 +22,10 @@ func main() {
 	//crud.Select()
 
 	// 更新
-	crud.Update()
+	//crud.Update()
+
+	//crud.InsertPro()
+
+	// 高级查询
+	crud.SelectPro()
 }
