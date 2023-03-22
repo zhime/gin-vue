@@ -9,7 +9,7 @@ import (
 
 var (
 	DB          *gorm.DB
-	mysqlLogger logger.Interface
+	MysqlLogger logger.Interface
 )
 
 func init() {
@@ -21,7 +21,7 @@ func init() {
 	config := "charset=utf8mb4&parseTime=True&loc=Local"
 
 	//mysqlLogger := logger.Default.LogMode(logger.Info) // 设置日志等级
-	mysqlLogger = logger.Default.LogMode(logger.Info)
+	MysqlLogger = logger.Default.LogMode(logger.Info)
 
 	//db := "user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
 	dsn := username + ":" + password + "@tcp(" + host + ":" + strconv.Itoa(port) + ")/" + dbName + "?" + config
