@@ -1,6 +1,7 @@
 package crud
 
 import (
+	"fmt"
 	"github.com/zhime/gin-vue/gorm_study/db"
 	"github.com/zhime/gin-vue/gorm_study/models"
 )
@@ -40,5 +41,27 @@ func One2ManyInsert() {
 	//db.DB.Take(&article, 4)
 	//_ = db.DB.Model(&user).Association("Article").Append(&article)
 	//_ = db.DB.Model(&article).Association("User").Append(&user)
+}
 
+func One2ManySelect() {
+	var user models.User
+	db.DB.Debug().Preload("Article").Take(&user)
+	fmt.Println(user)
+
+	var article models.Article
+	db.DB.Debug().Preload("User").Take(&article)
+	fmt.Println(article)
+}
+
+func One2ManyDelete() {
+	// 外键置为null
+	//var user models.User
+	//db.DB.Debug().Preload("Article").Take(&user, 2)
+	//_ = db.DB.Debug().Model(&user).Association("Article").Delete(&user.Article)
+	//db.DB.Debug().Delete(&user)
+
+	// 级联删除
+	var user models.User
+	db.DB.Debug().Take(&user, 1)
+	db.DB.Debug().Select("Article").Delete(&user)
 }

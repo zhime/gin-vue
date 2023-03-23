@@ -30,4 +30,6 @@ func main() {
 
 	// 一对多
 	//crud.One2ManyInsert()
+	//crud.One2ManySelect()
+	//crud.One2ManyDelete()
 }
