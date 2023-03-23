@@ -29,25 +29,5 @@ func main() {
 	//crud.SelectPro()
 
 	// 一对多
-	//_ = db.DB.Debug().AutoMigrate(&models.User{}, &models.Article{})
-	//db.DB.Debug().Create(&models.User{
-	//	Name: "zz",
-	//	Article: []models.Article{
-	//		{
-	//			Title: "Hello",
-	//		},
-	//	},
-	//})
-
-	//db.DB.Debug().Create(&models.Article{
-	//	Title: "golang",
-	//	Uid:   1,
-	//})
-
-	//db.DB.Debug().Create(&models.Article{
-	//	Title: "golang",
-	//	User: models.User{
-	//		Name: "张三",
-	//	},
-	//})
+	//crud.One2ManyInsert()
 }
