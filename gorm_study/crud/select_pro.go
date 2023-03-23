@@ -1,6 +1,7 @@
 package crud
 
 import (
+	"fmt"
 	"github.com/zhime/gin-vue/gorm_study/db"
 	"github.com/zhime/gin-vue/gorm_study/models"
 	"gorm.io/gorm"
@@ -32,7 +33,7 @@ func SelectPro() {
 	//fmt.Println(studentList)
 
 	// 分页查询。SELECT * FROM `students` LIMIT 2
-	loggerDB.Limit(2).Offset(0).Find(&studentList)
+	//loggerDB.Limit(2).Offset(0).Find(&studentList)
 	//fmt.Println(studentList)
 	//limit := 2
 	//page := 2
@@ -59,4 +60,8 @@ func SelectPro() {
 	//for _, value := range count {
 	//	fmt.Printf("count:%d,gender:%d\n", value["count"], value["gender"])
 	//}
+
+	// 子查询
+	loggerDB.Model(&models.Student{}).Where("age > (?)", loggerDB.Model(&models.Student{}).Select("avg(age)")).Find(&studentList)
+	fmt.Println(studentList)
 }
