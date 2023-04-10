@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/satori/go.uuid"
+	"github.com/google/uuid"
 	"github.com/zhime/gin-vue/model/ctype"
 )
 
