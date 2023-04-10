@@ -1,8 +1,8 @@
 package crud
 
 import (
-	"github.com/zhime/gin-vue/gorm_study/db"
-	"github.com/zhime/gin-vue/gorm_study/models"
+	"github.com/zhime/gin-vue/study/gorm/db"
+	"github.com/zhime/gin-vue/study/gorm/models"
 )
 
 func InsertPro() {

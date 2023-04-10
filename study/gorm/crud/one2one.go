@@ -2,12 +2,12 @@ package crud
 
 import (
 	"fmt"
-	"github.com/zhime/gin-vue/gorm_study/db"
-	"github.com/zhime/gin-vue/gorm_study/models"
+	"github.com/zhime/gin-vue/study/gorm/db"
+	models2 "github.com/zhime/gin-vue/study/gorm/models"
 )
 
 func One2OneInsert() {
-	_ = db.DB.Debug().AutoMigrate(&models.User{}, &models.UserInfo{})
+	_ = db.DB.Debug().AutoMigrate(&models2.User{}, &models2.UserInfo{})
 
 	// 新增
 	//db.DB.Debug().Create(&models.User{
@@ -21,7 +21,7 @@ func One2OneInsert() {
 	//})
 
 	// 查询
-	var user models.User
+	var user models2.User
 	db.DB.Debug().Preload("UserInfo").Take(&user)
 	fmt.Println(user)
 }
