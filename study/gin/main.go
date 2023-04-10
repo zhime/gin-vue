@@ -1,18 +1,11 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
+	"github.com/zhime/gin-vue/study/gin/router"
 )
 
 func main() {
-	r := gin.Default()
-	r.GET("", func(context *gin.Context) {
-		context.JSON(http.StatusOK, gin.H{
-			"msg":  "success",
-			"data": "Hello",
-		})
-	})
+	r := router.Routers()
 
 	_ = r.Run(":8080")
 }
