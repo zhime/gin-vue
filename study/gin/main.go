@@ -12,10 +12,13 @@ func main() {
 
 	r := initialize.InitRouters()
 
-	//zap.S().Infof("服务启动")
+	//logger, _ := zap.NewProduction()
+	//logger.Info("服务启动")
+
+	//_ = r.Run()
 
 	if err := r.Run(":8080"); err != nil {
-		//zap.S().Panic("启动失败:", err.Error())
+		//logger.Panic("启动失败")
 		panic("启动失败")
 	}
 }
