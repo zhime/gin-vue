@@ -1,6 +1,0 @@
-aliyun_sms:
-  access_key_id: "123"
-  access_key_secret: "XXXXX"
-  region_id: "XXXXX"
-  sign_name: "XXXXX"
-  template_code: "XXXXX"

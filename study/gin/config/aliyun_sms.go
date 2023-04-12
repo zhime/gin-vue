@@ -15,13 +15,14 @@ type ALiYunSms struct {
 	TemplateCode    string `mapstructure:"template_code"`
 }
 
-func (sms ALiYunSms) SendSMS(phoneNumber string) {
+func (sms ALiYunSms) SendSMS(phoneNumber string, code string) string {
 	config := sdk.NewConfig()
 
 	credential := credentials.NewAccessKeyCredential(sms.AccessKeyId, sms.AccessKeySecret)
 	client, err := dysmsapi.NewClientWithOptions(sms.RegionId, config, credential)
 	if err != nil {
 		panic(err)
+		//fmt.Println(err)
 	}
 
 	request := dysmsapi.CreateSendSmsRequest()
@@ -31,11 +32,13 @@ func (sms ALiYunSms) SendSMS(phoneNumber string) {
 	request.PhoneNumbers = phoneNumber
 	request.SignName = sms.SignName
 	request.TemplateCode = sms.TemplateCode
-	request.TemplateParam = "{\"code\":\"123456\"}"
+	request.TemplateParam = "{\"code\":\"" + code + "\"}"
 
 	response, err := client.SendSms(request)
 	if err != nil {
 		fmt.Print(err.Error())
+		//return "client err"
 	}
 	fmt.Printf("response is %#v\n", response)
+	return response.Message
 }

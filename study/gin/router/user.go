@@ -9,5 +9,6 @@ func InitRouterGroup(Router *gin.RouterGroup) {
 	UserRouter := Router.Group("user")
 	{
 		UserRouter.GET("list", api.GerUserList)
+		UserRouter.GET("sendsms", api.ALiYunSms)
 	}
 }
