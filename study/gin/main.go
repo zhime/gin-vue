@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/zhime/gin-vue/study/gin/initialize"
+	"go.uber.org/zap"
 )
 
 func main() {
@@ -12,8 +13,8 @@ func main() {
 
 	r := initialize.InitRouters()
 
-	//logger, _ := zap.NewProduction()
-	//logger.Info("服务启动")
+	logger, _ := zap.NewProduction()
+	logger.Info("服务启动")
 
 	//_ = r.Run()
 
