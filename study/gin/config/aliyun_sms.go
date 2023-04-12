@@ -5,7 +5,6 @@ import (
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/auth/credentials"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/dysmsapi"
-	"github.com/zhime/gin-vue/study/gin/global"
 )
 
 type ALiYunSms struct {
@@ -19,8 +18,8 @@ type ALiYunSms struct {
 func (sms ALiYunSms) SendSMS(phoneNumber string) {
 	config := sdk.NewConfig()
 
-	credential := credentials.NewAccessKeyCredential(global.ALiYunSms.AccessKeyId, global.ALiYunSms.AccessKeySecret)
-	client, err := dysmsapi.NewClientWithOptions(global.ALiYunSms.RegionId, config, credential)
+	credential := credentials.NewAccessKeyCredential(sms.AccessKeyId, sms.AccessKeySecret)
+	client, err := dysmsapi.NewClientWithOptions(sms.RegionId, config, credential)
 	if err != nil {
 		panic(err)
 	}
@@ -30,8 +29,8 @@ func (sms ALiYunSms) SendSMS(phoneNumber string) {
 	request.Scheme = "https"
 
 	request.PhoneNumbers = phoneNumber
-	request.SignName = global.ALiYunSms.SignName
-	request.TemplateCode = global.ALiYunSms.TemplateCode
+	request.SignName = sms.SignName
+	request.TemplateCode = sms.TemplateCode
 	request.TemplateParam = "{\"code\":\"123456\"}"
 
 	response, err := client.SendSms(request)

@@ -2,6 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/zhime/gin-vue/study/gin/api"
 	"net/http"
 )
 
@@ -31,6 +32,8 @@ func Routers() *gin.Engine {
 				"action": action,
 			})
 		})
+
+		v1.GET("/sendsms", api.ALiYunSms)
 
 		//v1.GET("/list/:id/*action", func(c *gin.Context) {
 		//	id := c.Param("id")
