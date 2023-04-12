@@ -32,7 +32,7 @@ func (sms ALiYunSms) SendSMS(phoneNumber string) {
 	request.PhoneNumbers = phoneNumber
 	request.SignName = global.ALiYunSms.SignName
 	request.TemplateCode = global.ALiYunSms.TemplateCode
-	request.TemplateParam = "{\"code\":\"123456\"}" // 验证码
+	request.TemplateParam = "{\"code\":\"123456\"}"
 
 	response, err := client.SendSms(request)
 	if err != nil {
