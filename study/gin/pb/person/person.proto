@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package person;
+
+option go_package = "github.com/zhime/gin-vue/study/gin/pb/person;person";
+
+message Person {
+  string name = 1;
+  int32 age = 2;
+  bool sex = 3;
+  repeated string test = 4;
+  map <string, string> test_map = 5;
+}
+
+message Home {
+  repeated Person persons = 1;
+  message V {
+    string name = 1;
+  }
+}
