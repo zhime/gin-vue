@@ -17,3 +17,8 @@ logger:
   director: log
   show_line: true
   log_in_console: true
+  
+redis:
+  host: 0.0.0.0
+  port: 6379
+  env: debug
