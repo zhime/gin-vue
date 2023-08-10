@@ -1,18 +1,18 @@
 package main
 
 import (
-	"github.com/zhime/gin-vue/core"
-	"github.com/zhime/gin-vue/flag"
+	core2 "github.com/zhime/gin-vue/gin-vue/backend/core"
+	"github.com/zhime/gin-vue/gin-vue/backend/flag"
 	"github.com/zhime/gin-vue/global"
 	"github.com/zhime/gin-vue/router"
 )
 
 func main() {
 	// 读取配置文件
-	core.InitConfig()
+	core2.InitConfig()
 
 	// 连接数据库
-	global.DB = core.InitGorm()
+	global.DB = core2.InitGorm()
 
 	option := flag.Parse()
 	if flag.IsWebStop(option) {
@@ -21,7 +21,7 @@ func main() {
 	}
 
 	// 日志
-	global.Log = core.InitLogger()
+	global.Log = core2.InitLogger()
 
 	// 路由
 	r := router.InitRouter()
