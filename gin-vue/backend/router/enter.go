@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/zhime/gin-vue/global"
+	"github.com/zhime/gin-vue/gin-vue/global"
 )
 
 type RouterGroup struct {

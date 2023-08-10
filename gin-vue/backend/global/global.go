@@ -2,7 +2,7 @@ package global
 
 import (
 	"github.com/sirupsen/logrus"
-	"github.com/zhime/gin-vue/gin-vue/backend/config"
+	"github.com/zhime/gin-vue/gin-vue/config"
 	"gorm.io/gorm"
 )
 

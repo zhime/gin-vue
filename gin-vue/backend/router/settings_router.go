@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/zhime/gin-vue/gin-vue/backend/api"
+	"github.com/zhime/gin-vue/gin-vue/api"
 )
 
 //func SettingsRouter(router *gin.Engine) {
