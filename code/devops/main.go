@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/zhime/go/code/utils"
+)
 
 func main() {
 	fmt.Println("devops")
+	fmt.Println(utils.Sum(2, 3))
 }
