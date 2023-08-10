@@ -1,4 +1,4 @@
-module github.com/zhime/gin-vue
+module github.com/zhime/gin-vue/gin-vue
 
 go 1.16
 
