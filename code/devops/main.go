@@ -10,4 +10,7 @@ func main() {
 	fmt.Println(utils.Sum(2, 3))
 	fmt.Println(utils.Sum(2, 3))
 	fmt.Println(utils.Sum(2, 3))
+	fmt.Println(utils.Sum(2, 3))
+	fmt.Println(utils.Sum(2, 3))
+	fmt.Println(utils.Sum(2, 3))
 }
