@@ -8,7 +8,12 @@ type Person struct {
 	gender string
 }
 
+type Dog struct {
+	hab string
+}
+
 type Student struct {
+	Dog
 	person Person
 	class  string
 }
@@ -20,6 +25,7 @@ func main() {
 	}
 
 	s := Student{
+		Dog: Dog{hab: "test"},
 		person: Person{
 			name:   "dev",
 			age:    18,
@@ -29,4 +35,5 @@ func main() {
 	}
 	fmt.Println(p.name, p.age)
 	fmt.Println(s.person.name, s.class)
+	fmt.Println(s)
 }
