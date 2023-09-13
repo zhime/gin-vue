@@ -1,2 +1,0 @@
-# gin-vue
-gin-vue

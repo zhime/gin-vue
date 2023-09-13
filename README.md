@@ -1,5 +1,2 @@
-# gin
+# gin-vue
 gin-vue
-
-# go
-golang
