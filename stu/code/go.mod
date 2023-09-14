@@ -1,4 +1,4 @@
-module github.com/zhime/go/code
+module github.com/zhime/gin-vue/code
 
 go 1.19
 

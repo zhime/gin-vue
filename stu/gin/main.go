@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/zhime/gin-vue/study/gin/core"
-	"github.com/zhime/gin-vue/study/gin/initialize"
+	"github.com/zhime/gin-vue/stu/gin/core"
+	"github.com/zhime/gin-vue/stu/gin/initialize"
 )
 
 func main() {

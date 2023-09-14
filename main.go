@@ -1,10 +1,10 @@
 package main
 
 import (
-	core2 "github.com/zhime/gin-vue/gin-vue/core"
-	"github.com/zhime/gin-vue/gin-vue/flag"
-	"github.com/zhime/gin-vue/gin-vue/global"
-	"github.com/zhime/gin-vue/gin-vue/router"
+	core2 "github.com/zhime/gin-vue/core"
+	"github.com/zhime/gin-vue/flag"
+	"github.com/zhime/gin-vue/global"
+	"github.com/zhime/gin-vue/router"
 )
 
 func main() {
