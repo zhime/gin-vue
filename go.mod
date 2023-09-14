@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/aliyun/alibaba-cloud-sdk-go v1.62.280
-	github.com/gin-gonic/gin v1.9.0
+	github.com/gin-gonic/gin v1.9.1
 	github.com/golang-jwt/jwt/v5 v5.0.0-rc.2
 	github.com/google/uuid v1.3.0
 	github.com/sirupsen/logrus v1.9.0

@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/zhime/gin-vue/study/gin/global"
+	"github.com/zhime/gin-vue/stu/gin/global"
 	"math/rand"
 	"net/http"
 	"strconv"

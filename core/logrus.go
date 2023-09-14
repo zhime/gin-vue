@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/sirupsen/logrus"
-	"github.com/zhime/gin-vue/gin-vue/global"
+	"github.com/zhime/gin-vue/global"
 	"os"
 	"path"
 )

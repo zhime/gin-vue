@@ -19,7 +19,7 @@ type Config struct {
 
 func main() {
 	v := viper.New()
-	v.SetConfigFile("study/gin/aliyunsms.yaml")
+	v.SetConfigFile("stu/gin/aliyunsms.yaml")
 	err := v.ReadInConfig()
 	if err != nil {
 		fmt.Println(err)

@@ -1,7 +1,7 @@
 package api
 
 import (
-	"github.com/zhime/gin-vue/gin-vue/api/settings_api"
+	"github.com/zhime/gin-vue/api/settings_api"
 )
 
 type ApiGroup struct {

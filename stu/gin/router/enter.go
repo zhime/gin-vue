@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/zhime/gin-vue/study/gin/api"
+	"github.com/zhime/gin-vue/stu/gin/api"
 	"net/http"
 )
 

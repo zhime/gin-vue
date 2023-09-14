@@ -1,6 +1,6 @@
 package global
 
-import "github.com/zhime/gin-vue/study/gin/config"
+import "github.com/zhime/gin-vue/stu/gin/config"
 
 var (
 	Config *config.Config

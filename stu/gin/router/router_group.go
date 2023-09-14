@@ -1,6 +1,6 @@
 package router
 
-import "github.com/zhime/gin-vue/study/gin/router/system"
+import "github.com/zhime/gin-vue/stu/gin/router/system"
 
 type RouteGroup struct {
 	System system.RouterGroup

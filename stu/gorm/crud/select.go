@@ -3,8 +3,8 @@ package crud
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/zhime/gin-vue/gin-vue/study/gorm/db"
-	"github.com/zhime/gin-vue/gin-vue/study/gorm/models"
+	"github.com/zhime/gin-vue/stu/gorm/db"
+	"github.com/zhime/gin-vue/stu/gorm/models"
 	"gorm.io/gorm"
 )
 

@@ -2,7 +2,7 @@ package initialize
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/zhime/gin-vue/study/gin/router"
+	"github.com/zhime/gin-vue/stu/gin/router"
 )
 
 func InitRouters() *gin.Engine {

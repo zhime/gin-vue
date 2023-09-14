@@ -2,8 +2,8 @@ package crud
 
 import (
 	"fmt"
-	"github.com/zhime/gin-vue/study/gorm/db"
-	models2 "github.com/zhime/gin-vue/study/gorm/models"
+	"github.com/zhime/gin-vue/stu/gorm/db"
+	models2 "github.com/zhime/gin-vue/stu/gorm/models"
 )
 
 func One2OneInsert() {

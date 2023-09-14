@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package person;
 
-option go_package = "github.com/zhime/gin-vue/study/gin/pb/person;person";
+option go_package = "github.com/zhime/gin-vue/stu/gin/pb/person;person";
 
 message Person {
   string name = 1;

@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/zhime/gin-vue/gin-vue/global"
+	"github.com/zhime/gin-vue/global"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
