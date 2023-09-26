@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zhime/gin-vue/code/utils"
+	"github.com/zhime/gin-vue/stu/code/utils"
 )
 
 func main() {
