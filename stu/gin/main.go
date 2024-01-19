@@ -13,6 +13,7 @@ func main() {
 
 	core.InitConfig()
 
+	//r := router.Routers()
 	r := initialize.InitRouters()
 
 	//logger, _ := zap.NewProduction()
