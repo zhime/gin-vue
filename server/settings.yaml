@@ -8,17 +8,22 @@ mysql:
   port: 3306
   user: root
   password: 123456
-  db: gin
+  database: gin
   log_level: dev
 
-logger:
+redis:
+  host: 127.0.0.1
+  port: 6379
+  database: 0
+  password: ""
+
+zap:
   level: info
-  prefix: "[gin_project]"
+  format: console
+  prefix: "[github.com/flipped-aurora/gin-vue-admin/server]"
   director: log
   show_line: true
+  encode_level: LowercaseColorLevelEncoder
+  stacktrace_key: stacktrace
   log_in_console: true
-  
-redis:
-  host: 0.0.0.0
-  port: 6379
-  env: debug
+
