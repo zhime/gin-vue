@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/zhime/gin-vue/server/core"
+)
 
 func main() {
-	fmt.Println("hello")
+	core.InitViper()
 }
