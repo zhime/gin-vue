@@ -2,7 +2,10 @@ module github.com/zhime/gin-vue/server
 
 go 1.19
 
-require github.com/spf13/viper v1.18.2
+require (
+	github.com/spf13/viper v1.18.2
+	go.uber.org/zap v1.21.0
+)
 
 require (
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
