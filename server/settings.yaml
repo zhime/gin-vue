@@ -6,9 +6,10 @@ system:
 mysql:
   host: 127.0.0.1
   port: 3306
-  user: root
+  username: root
   password: 123456
   database: gin
+  config: "charset=utf8mb4&parseTime=True&loc=Local"
   log_level: dev
 
 redis:

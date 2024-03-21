@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/zhime/gin-vue/server/core"
 	"github.com/zhime/gin-vue/server/global"
 )
@@ -8,5 +9,7 @@ import (
 func main() {
 	core.InitViper()
 	core.InitZap()
-	global.Zap.Info("TEST")
+	global.Zap.Info("test")
+	core.InitGorm()
+	fmt.Println(global.Db)
 }
