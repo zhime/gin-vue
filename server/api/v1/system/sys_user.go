@@ -17,5 +17,5 @@ func (b *BaseApi) GetUserInfo(c *gin.Context) {
 	//	return
 	//}
 	//response.OkWithDetailed(gin.H{"userInfo": "ReqUser"}, "获取成功", c)
-	response.OkWithDetailed(gin.H{"userInfo": "ReqUser"}, "获取成功", c)
+	response.OkWithDetailed(gin.H{"userInfo": "ReqUserTest"}, "获取成功", c)
 }
