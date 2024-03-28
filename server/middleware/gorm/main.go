@@ -1,7 +1,8 @@
 package main
 
-import "github.com/zhime/gin-vue/server/middleware/gorm/db"
+import "github.com/zhime/gin-vue/server/middleware/gorm/model"
 
 func main() {
-	db.Init()
+	//model.TestUserCreate()
+	model.TestUserSelect()
 }
