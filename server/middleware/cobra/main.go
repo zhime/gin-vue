@@ -16,5 +16,5 @@ func main() {
 		},
 	}
 
-	rootCmd.Execute()
+	_ = rootCmd.Execute()
 }
