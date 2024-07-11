@@ -13,12 +13,11 @@ func main() {
 	endpoint := "192.168.34.33:9000"
 	accessKeyID := "XRuvYO7rCERtgTF8oARm"
 	secretAccessKey := "WcEq9AqzY5ltUDgMCkhqeTi1L49kp896EV5ghm2i"
-	useSSL := false
 
 	// Initialize minio client object.
 	minioClient, err := minio.New(endpoint, &minio.Options{
 		Creds:  credentials.NewStaticV4(accessKeyID, secretAccessKey, ""),
-		Secure: useSSL,
+		Secure: false,
 	})
 	if err != nil {
 		log.Fatalln(err)
@@ -43,9 +42,10 @@ func main() {
 
 	// Upload the test file
 	// Change the value of filePath if the file is in another location
-	objectName := "ecs.png"
-	filePath := "C:\\Users\\ecs.png"
-	contentType := "image/png"
+	objectName := "1.webp"
+	filePath := "C:\\Users\\jianchen\\Pictures\\1.webp"
+	//contentType := "image/png"
+	contentType := "image/webp"
 
 	// Upload the test file with FPutObject
 	info, err := minioClient.FPutObject(ctx, bucketName, objectName, filePath, minio.PutObjectOptions{ContentType: contentType})
