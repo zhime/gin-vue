@@ -22,7 +22,7 @@ zap:
     level: info
     prefix: '[github.com/zhime/server]'
     format: console
-    director: log
+    director: logs
     encode-level: LowercaseColorLevelEncoder
     stacktrace-key: stacktrace
     max-age: 0
