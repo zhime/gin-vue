@@ -16,7 +16,7 @@ func main() {
 			"192.168.34.34:6379",
 			"192.168.34.35:6379",
 		},
-		Password: "netopstec",
+		Password: "password",
 	})
 
 	// 测试连接
