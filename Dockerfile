@@ -13,6 +13,7 @@ RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -a -o main .
 FROM alpine:3.17 as final
 #RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && apk add --no-cache tzdata
 ENV TZ="Asia/Shanghai"
+RUN apk update && apk add --no-cache tzdata bash && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime && rm -rf /var/lib/apk/*
 WORKDIR /opt/app
 COPY --from=builder /opt/app/main .
 EXPOSE 8080
