@@ -17,6 +17,7 @@ Gin-vue是一个基于 vue 和 gin 开发的全栈前后端分离的开发基础
 - golang版本 >= v1.19
 ```
 # server项目
+### 本地运行
 ```
 # 克隆项目
 git clone https://github.com/zhime/gin-vue.git
@@ -28,4 +29,8 @@ go build
 
 # 运行
 ./server
+```
+### kubernetes运行
+```
+待完善。。。
 ```
